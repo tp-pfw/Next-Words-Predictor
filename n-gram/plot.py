@@ -1,0 +1,28 @@
+vals1=[0.006611776447105789,
+0.027127678995217057,
+0.014947097352068521,
+0.00013536379018612522,
+0.0001353546291283162,
+0.0001353546291283162,
+0.00040584415584415587,
+0.0004051316677920324,
+0.00027025200999932435]
+vals2=[0.00625,
+0.048554282596835786,
+0.048554282596835786,
+0.027163613392293114,
+0.0007961783439490446,
+0.001589825119236884,
+0.003142183817753339,
+0.002382843526608419,
+0.010861132660977503]
+import seaborn as sns, numpy as np
+sns.set_theme(); np.random.seed(0)
+bins1=len(vals1)
+bins2=len(vals2)
+sns.distplot(vals1, bins=bins1, label = 'Dataset1', color='blue', kde=True)
+sns.distplot(vals1, bins=bins1, label = 'Dataset2', color='red', kde=True)
+plt.ylabel('Accuracy density', fontsize=12)
+plt.legend()
+plt.ylabel('Accuracy Distribution', fontsize=14)
+plt.legend()
